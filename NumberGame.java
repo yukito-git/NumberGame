@@ -13,6 +13,8 @@ public class NumberGame{
         int count = 0;
         int maxAttempts = 0;
 
+        //難易度選択
+
         System.out.println("難易度を選択してください");
         System.out.println("1：簡単(1～10)");
         System.out.println("2：普通(1～100)");
@@ -45,6 +47,8 @@ public class NumberGame{
 
         System.out.println("1～" + max + "の数字を当ててください");
 
+
+        //数値入力
         while(count < maxAttempts){
 
             System.out.print("数字を入力:");
@@ -58,8 +62,10 @@ public class NumberGame{
 
             count++;
 
-
+            //diffで絶対値を求める
             int diff = Math.abs(answer - guess);
+
+            //ヒントを提示・クリア、ゲームオーバーを表示
 
             if(diff <= 3 && guess != answer){
                 System.out.println("かなり近い!");
@@ -81,6 +87,8 @@ public class NumberGame{
             System.out.println("ゲームオーバー！");
             System.out.println("正解は" + answer + "でした");
         }
+
+        //再度、ゲームを遊ぶか決める選択肢
 
         System.out.println("もう一回やりますか？");
         System.out.println("1:はい");
